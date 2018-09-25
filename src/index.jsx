@@ -9,6 +9,7 @@ import ticketListReducer from './reducers/ticket-list-reducer';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 
+
 const store = createStore(rootReducer);
 
 let unsubscribe = store.subscribe(() =>
@@ -19,7 +20,7 @@ const render = (Component) => {
   ReactDOM.render(
     <HashRouter>
       <Provider store={store}>
-        <Component/>
+        <Component />
       </Provider>
     </HashRouter>,
     document.getElementById('react-app-root')
